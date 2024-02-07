@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto final</title>
+    <link rel="stylesheet" href="style_d.css">
+    <script src="https://gmousse.github.io/dataframe-js/dist/dataframe.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="menu">
+                <a href="#introduccion">Introducción</a>
+                <a href="#graficas" style="display: none;" id="menu-graficas">Gráficas</a>
+                <a href="#tablas" style="display: none;" id="menu-tablas">Tablas</a>
+                <a href="#about-me">About Me</a>
+                <a href="#exit">Exit</a>
+                <hr>
+        </nav>
+    </header>
+
+    <section class="contenedor1">
+        <div class="container1">
+            <h1 id="h1">
+                Selecciona o arrastra un fichero para procesarlo <br>
+                y poder seguir con las operando con la página web
+            </h1>
+            <p>Dragable es una selección que te permite arrastrar y soltar elementos en la página.</p>
+            <div class="draggableArea" draggable="true" id="dragg">
+                <p>Arrastra un fichero aquí <label for="fileInput">o haz click aqui</label></p>
+                <input type="file" name="fileInput" id="fileInput" style="display: none;" accept=".csv">
+            </div>
+        </div>
+   
+
+        
+
+        <div class="container2">
+            <div class="section" id="graficas">
+                <h1>Gráficas</h1>
+                <br>En esta sección puedes ver </br>todas las gráficas de interés de los datos introducidos</p>
+                <img src="../imgs/Grafica Blanca.png" alt="Imagen de unas graficas">
+            </div>
+
+            <div class="section" id="tablas">
+                <h1>Tablas</h1>
+                <p>En esta seccion puedes ver <br> todas las tablas introducidas</p>
+                <img src="../imgs/Tabals blanca.png" alt="Imagen de una tabla">
+            </div>
+
+            <div class="section" id="about-me">
+                <h1>About Me</h1>
+                <p>En esta seccion puedes ver información sobre el creador de la página</p>
+                <img src="../imgs/Foto Ficha.jpg" alt="Imagen Carnet" class="carnet">
+            </div>
+
+            <div class="section" id="exit">
+                <h1>Exit</h1>
+                <p>Salir de la sesión y volver a la página de inicio de sesión</p>
+                <img src="../imgs/Exit blanca.png" alt="imagen de salida">
+            </div>
+        </div>
+    </section>
+
+    <section class="contenedor2">
+        <div class="container">
+            <h1>Gráficas</h1>
+            <h3>Introduce los parámetros de filtro para la gráfica</h3>
+            <p>Selecciona el rango de años</p>
+            <input type="range" name="sliderAno" id="sliderAnoG" min="2009" max="2023" value="2009" oninput="updateSliderValueGraficas()">
+            <p id="sliderValueG"> Año Seleccionado: 2009</p>
+        </div>
+
+        <div class="containerG">
+            <h1>Tablas</h1>
+            <p>En esta seccion puedes ver todas las tablas introducidas</p>
+        </div> 
+    </section>
+
+    <section class="contenedor3">
+        <div class="container" id="titulo">
+            <h1>Tablas</h1>
+            <h3>Introduce los párametros de filtro para la tabla</h3>
+            <p>Selecciona el rango de años</p>
+            <input type="range" name="sliderAno" id="sliderAnoT" min="2009" max="2023" value="2009" oninput="updateSliderValueTablas()">
+            <p id="sliderValueT"> Año Seleccionado: 2009</p>
+        </div>
+        <div class="containerT" id="total">
+            Tabla Total
+        </div>
+        <div class="containerT" id="resultadoAno">
+            Resultado Año
+        </div>
+    </section>
+
+    <section class="contenedor4">
+        <div class="container">
+            <div class="about" id="introduccion">
+                <h1>About Me</h1>
+                <p>Apasionado por la tecnologia y la innovación, disfruto explorando las últimas tendencias en desarollo de software y diseño web.
+                    Me encante el proceso creativo de convertir ideas complejas en aplicaciones simples y páginas web elegantes y funcionales.
+                    En mi tiempo libre, me sumerjo en el vasto mundo de los videojuegos o me pierdo en la música de mis artistas favoritos.
+                    La naturaleza me inspira, por lo que a menudo salgo a caminar  para conectarme con el entorno y encontrar un nuevo enfoque para los proyectos que emprendo. 
+                    Estoy constantemente en busca de nuevas experiencias que amplien mis horizontes y me empujen a salir de mi zona de confort.
+                    <br>
+                    Fuera del mundo digital, tengo una afinidad por el aire libre. Ya sea haciendo senderismo por senderos sinuosos o acampando bajo un cielo estrellado, me siento más en casa cuando estoy rodeado por la belleza de la naturaleza.
+                    También disfruto mucho de la cocina, especialmente esperimetando con recetas de diferentes culturas y fusionando sabonres inesperados.
+                    Los libros son otra pasión: me pierdo fácilmente en las páginas de novelas históricas y biograficas de figuras inspiradoras que han moldeado nuestro mundo.
+                    La volundtad de aprender y crecer me impulsa a involucrarme en proyectos comunitarios y avilidades que tienen un impacto positivo en la sociedad.           
+                </p>
+                <img src="../imgs/Foto Ficha.jpg" alt="Imagen Carnet" class="carnet">
+                <div class="redes">
+                    <a href="https://github.com/MarioTarrega"><img src="../imgs/Redes/gitHub.png" alt="GitHub"></a>
+                    <a href="https://twitter.com/mariotb25"><img src="../imgs/Redes/image (1).png" alt="X"></a>
+                    <a href="https://www.instagram.com/mariotb25/"><img src="../imgs/Redes/instagram.png" alt="Instagram"></a>
+                </div>
+            </div>   
+        </div>
+    </section>
+    <footer>
+        <nav class="pie">
+            <a href="#introduccion">Introducción</a>
+            <a href="#graficas" style="display: none;" id="menu-grafica">Gráficas</a>
+            <a href="#tablas" style="display: none;" id="menu-tablas">Tablas</a>
+            <a href="#about-me">About Me</a>
+            <a href="#exit">Exit</a>
+            <a href="https://github.com/MarioTarrega"><img src="../imgs/Redes/image.png" alt="GitHub"></a>
+            <a href="https://twitter.com/mariotb25"><img src="../imgs/Redes/X(white).png" alt="X"></a>
+            <a href="https://www.instagram.com/mariotb25/"><img src="../imgs/Redes/instagram(white).png" alt="Instagram"></a>
+        </nav>
+    </footer>    
+    
+    <script src="script-dash.js"></script>
+
+    </body>
+</html>
+   
